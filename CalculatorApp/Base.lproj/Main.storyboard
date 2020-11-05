@@ -1,24 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MRV-CN-f5c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lu6-uc-umy">
+                                <rect key="frame" x="8" y="114.5" width="398" height="398"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="JTT-gl-inr" userLabel="Row1">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="76.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nh5-pq-th5" userLabel="Clear" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsX-84-vVC" userLabel="Division" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="198" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ow8-pK-Ny4" userLabel="Row2">
+                                        <rect key="frame" x="0.0" y="80.5" width="398" height="76.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJE-aa-yaN" userLabel="7" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAF-cf-KYI" userLabel="8" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="98" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpU-Ix-gg5" userLabel="9" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="98" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHW-dg-8En" userLabel="Multiply" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="98" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Reo-JI-fgP" userLabel="Row3">
+                                        <rect key="frame" x="0.0" y="161" width="398" height="76"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VmX-WY-MGr" userLabel="4" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="76"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AI7-cD-kS8" userLabel="5" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="98" height="76"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYd-Na-Zvv" userLabel="6" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="98" height="76"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pB-zr-xqa" userLabel="Subtract" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="98" height="76"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="siA-fY-XEA" userLabel="Row4">
+                                        <rect key="frame" x="0.0" y="241" width="398" height="76.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dX6-eE-GOG" userLabel="1" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ag-xw-RQe" userLabel="2" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="98" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxl-rK-Vqx" userLabel="3" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="98" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-vg-4Du" userLabel="Plus" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="98" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="S4B-tj-R4w" userLabel="Row4">
+                                        <rect key="frame" x="0.0" y="321.5" width="398" height="76.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNh-E0-8X4" userLabel="0" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDm-e8-QY0" userLabel="Total" customClass="CalculatorButton" customModule="CalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="198" height="76.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lu6-uc-umy" secondAttribute="height" multiplier="1:1" id="DWX-vk-Fuw"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S60-c3-edo">
+                                <rect key="frame" x="16" y="60" width="382" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A3a-5W-ggs">
+                                <rect key="frame" x="16" y="528.5" width="382" height="317.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KIw-4k-yvu">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Zf2-la-roq">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z3Z-XH-jR4">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HkP-Jb-BJV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lu6-uc-umy" firstAttribute="top" secondItem="S60-c3-edo" secondAttribute="bottom" constant="16" id="1fZ-Pe-Y9e"/>
+                            <constraint firstItem="A3a-5W-ggs" firstAttribute="leading" secondItem="HkP-Jb-BJV" secondAttribute="leading" constant="16" id="FXe-IN-DQo"/>
+                            <constraint firstItem="HkP-Jb-BJV" firstAttribute="trailing" secondItem="lu6-uc-umy" secondAttribute="trailing" constant="8" id="GQs-Af-Twq"/>
+                            <constraint firstItem="S60-c3-edo" firstAttribute="top" secondItem="HkP-Jb-BJV" secondAttribute="top" constant="16" id="J7I-eX-Wft"/>
+                            <constraint firstItem="S60-c3-edo" firstAttribute="leading" secondItem="HkP-Jb-BJV" secondAttribute="leading" constant="16" id="QQP-Yv-11x"/>
+                            <constraint firstItem="lu6-uc-umy" firstAttribute="centerX" secondItem="HkP-Jb-BJV" secondAttribute="centerX" id="S1Y-v4-eoy"/>
+                            <constraint firstItem="lu6-uc-umy" firstAttribute="leading" secondItem="HkP-Jb-BJV" secondAttribute="leading" constant="8" id="W18-Wj-ayP"/>
+                            <constraint firstItem="HkP-Jb-BJV" firstAttribute="trailing" secondItem="S60-c3-edo" secondAttribute="trailing" constant="16" id="ezB-Kf-dwi"/>
+                            <constraint firstItem="HkP-Jb-BJV" firstAttribute="trailing" secondItem="A3a-5W-ggs" secondAttribute="trailing" constant="16" id="gj7-Yk-SXp"/>
+                            <constraint firstItem="HkP-Jb-BJV" firstAttribute="bottom" secondItem="A3a-5W-ggs" secondAttribute="bottom" constant="16" id="xWs-hn-QbU"/>
+                            <constraint firstItem="A3a-5W-ggs" firstAttribute="top" secondItem="lu6-uc-umy" secondAttribute="bottom" constant="16" id="zQA-Qd-GGj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="additionButton" destination="GiF-vg-4Du" id="guz-H8-Kx6"/>
+                        <outlet property="calculationDisplayLabel" destination="S60-c3-edo" id="Jdf-Tx-ZAB"/>
+                        <outlet property="clearButton" destination="nh5-pq-th5" id="MFK-SV-oWv"/>
+                        <outlet property="divisionButton" destination="vsX-84-vVC" id="Jba-3z-R8Q"/>
+                        <outlet property="eightButton" destination="JAF-cf-KYI" id="Qcn-7A-GYO"/>
+                        <outlet property="fiveButton" destination="AI7-cD-kS8" id="3K1-u2-yKS"/>
+                        <outlet property="fourButton" destination="VmX-WY-MGr" id="8Ma-1y-oEn"/>
+                        <outlet property="multiplicationButton" destination="NHW-dg-8En" id="YDH-dT-xmy"/>
+                        <outlet property="nineButton" destination="hpU-Ix-gg5" id="FPb-TI-haJ"/>
+                        <outlet property="oneButton" destination="dX6-eE-GOG" id="Foh-DG-MK0"/>
+                        <outlet property="sevenButton" destination="LJE-aa-yaN" id="mpZ-7Z-W1T"/>
+                        <outlet property="sixButton" destination="qYd-Na-Zvv" id="IS0-cx-3bE"/>
+                        <outlet property="subtractionButton" destination="2pB-zr-xqa" id="Hv6-ED-0Ww"/>
+                        <outlet property="threeButton" destination="cxl-rK-Vqx" id="Ywv-Qe-kiQ"/>
+                        <outlet property="totalButton" destination="kDm-e8-QY0" id="xqF-5i-ZPS"/>
+                        <outlet property="twoButton" destination="6Ag-xw-RQe" id="7cT-SR-ugy"/>
+                        <outlet property="zeroButton" destination="MNh-E0-8X4" id="DRq-S4-HHy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-113" y="1"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
