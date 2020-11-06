@@ -1,7 +1,10 @@
 # Calculator App
 
-## Setup
+## Requirements
 * Xcode 12
 * Cocoapods 
-	- `pod install`
-	- 
+* iPhone
+* Portrait 
+
+## How to Setup
+Install cocoapods and open .xcworkspace file 
