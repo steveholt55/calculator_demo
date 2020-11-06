@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CalculationState {
+enum CalculationState: String, Codable {
     case leftSide
     case operation
     case rightSide

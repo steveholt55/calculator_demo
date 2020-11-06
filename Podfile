@@ -7,6 +7,8 @@ target 'CalculatorApp' do
 
   # Pods for CalculatorApp
   pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
   pod 'SnapKit', '~> 4.0'
 
   target 'CalculatorAppTests' do

@@ -7,30 +7,19 @@
 
 import Foundation
 
-enum CalculationOperation: CalulationButtonTypeable {
+enum CalculationOperation: String, CalulationButtonTypeable, Codable {
     /// Addition
-    case add
+    case add = "+"
     /// Subtraction
-    case subtract
+    case subtract = "-"
     /// Multiplication
-    case multiply
+    case multiply = "x"
     /// Division
-    case divide
+    case divide = "/"
     /// Modulo
-    case modulo
+    case modulo = "%"
     
     func stringValue() -> String {
-        switch self {
-        case .add:
-            return "+"
-        case .subtract:
-            return "-"
-        case .multiply:
-            return "x"
-        case .divide:
-            return "/"
-        case .modulo:
-            return "%"
-        }
+        return self.rawValue
     }
 }

@@ -34,15 +34,15 @@ class CalculatorButton: UIButton {
             case .action(let action):
                 self.label.text = action.stringValue()
                 self.label.textColor = .white
-                self.backgroundCircle.backgroundColor = .systemRed
+                self.backgroundCircle.backgroundColor = .systemTeal
             case .operation(let operation):
                 self.label.text = operation.stringValue()
                 self.label.textColor = .white
-                self.backgroundCircle.backgroundColor = .red
+                self.backgroundCircle.backgroundColor = .systemOrange
             case .number(let number):
                 self.label.text = number.stringValue()
                 self.label.textColor = .white
-                self.backgroundCircle.backgroundColor = .red
+                self.backgroundCircle.backgroundColor = .systemRed
             }
         }
     }

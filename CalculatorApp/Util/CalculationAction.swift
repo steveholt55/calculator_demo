@@ -18,7 +18,7 @@ enum CalculationAction: CalulationButtonTypeable {
     func stringValue() -> String {
         switch self {
         case .clear:
-            return "c"
+            return "C"
         case .total:
             return "="
         case .negation:
